@@ -14,7 +14,7 @@ const fail = () => document.documentElement.classList.add('no3d');
 })();
 
 function init(THREE) {
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches && !/motion=1/.test(location.search); /*TESTFLAG*/
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
   const stage = canvas.parentElement;
   const small = innerWidth < 900;
